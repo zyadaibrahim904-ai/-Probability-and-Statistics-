@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موسوعة الإحصاء والاحتمالات</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent-1: #10b981;
+            --accent-2: #f59e0b;
+            --accent-3: #ef4444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* الهيدر وشريط الإنجاز */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .progress-container {
+            background-color: #334155;
+            border-radius: 20px;
+            height: 15px;
+            width: 100%;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary), var(--accent-1));
+            height: 100%;
+            width: 35%; /* نسبة الإنجاز التجريبية */
+            transition: width 0.5s ease;
+        }
+
+        /* المحاور (Cards) */
+        .axis-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid #334155;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .axis-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .axis-title {
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .axis-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* الروابط والأزرار */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            background-color: #273549;
+        }
+
+        .btn-link:hover {
+            padding-right: 28px;
+        }
+
+        .link-gemini:hover { background-color: rgba(56, 189, 248, 0.15); color: var(--primary); }
+        .link-notebook:hover { background-color: rgba(16, 185, 129, 0.15); color: var(--accent-1); }
+        .link-questions:hover { background-color: rgba(245, 158, 11, 0.15); color: var(--accent-2); }
+
+        .icon {
+            font-size: 1.2rem;
+        }
+
+        /* الفوتر (صورتك واسمك) */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #334155;
+            width: 100%;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); /* تأثير الإضاءة Glow */
+            margin-bottom: 15px;
+        }
+
+        footer h2 {
+            font-size: 1.3rem;
+            margin: 5px 0;
+            letter-spacing: 1px;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        h5{
+            color: rgb(29, 14, 162);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>📊 موسوعة الإحصاء والاحتمالات</h1>
+            <p style="color: var(--text-muted);">منهج منظم ومبسط مقسم إلى 3 محاور ذكية</p>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--accent-1); margin-top: 5px;">نسبة الإنجاز الحالي: 35%</p>
+        </header>
+
+        <div class="axis-card">
+            <h2 class="axis-title">📁 المحور الأول: أساسيات الإحصاء الوصفي (الشباتر 1 - 3)</h2>
+            <div class="axis-desc">يشمل: طرق جمع البيانات، تنظيمها وتلخيصها، الرسوم البيانية، ومقاييس النزعة المركزية والتشتت.</div>
+            <div class="links-container">
+                <a href="https://gemini.google.com/share/00470df75633" class="btn-link link-gemini"><span class="icon">🤖</span> ملخص شرح الذكاء الاصطناعي - Gemini</a>
+                <a href="https://notebooklm.google.com/notebook/83c581e6-31dd-49e7-8e8e-59e22b8fe38e/artifact/45f85471-83d0-4fd7-97a2-b9208256c3f4?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_2&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_2_" class="btn-link link-notebook"><span class="icon">🎬</span> ملخص شرح الفيديو - Notebook</a>
+                <a href="#" class="btn-link link-questions"><span class="icon">📝</span> بنك الأسئلة والتدريبات التفاعلية</a>
+            </div>
+        </div>
+
+        <div class="axis-card">
+            <h2 class="axis-title">📁 المحور الثاني: نظرية الاحتمالات (الشباتر 4 - 6)</h2>
+            <div class="axis-desc">يشمل: مفاهيم وقواعد الاحتمالات، التباديل والتوافيق، والتوزيعات الاحتمالية المتقطعة والمتصلة.</div>
+            <div class="links-container">
+                <a href="#" class="btn-link link-gemini"><span class="icon">🤖</span> ملخص شرح الذكاء الاصطناعي - Gemini</a>
+                <a href="https://notebooklm.google.com/notebook/83c581e6-31dd-49e7-8e8e-59e22b8fe38e/artifact/38590d58-7da3-4536-b06b-84194a592415?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_2&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_2_" class="btn-link link-notebook"><span class="icon">🎬</span> ملخص شرح الفيديو - Notebook</a>
+                <a href="#" class="btn-link link-questions"><span class="icon">📝</span> بنك الأسئلة والتدريبات التفاعلية</a>
+            </div>
+        </div>
+
+        <div class="axis-card">
+            <h2 class="axis-title">📁 المحور الثالث: الإحصاء الاستدلالي (الشباتر 7 - 10)</h2>
+            <div class="axis-desc">يشمل: توزيعات المعاينة، فترات الثقة، اختبارات الفروض الإحصائية، وتحليل الانحدار والارتباط.</div>
+            <div class="links-container">
+                <a href="#" class="btn-link link-gemini"><span class="icon">🤖</span> ملخص شرح الذكاء الاصطناعي - Gemini</a>
+                <a href="#" class="btn-link link-notebook"><span class="icon">🎬</span> ملخص شرح الفيديو - Notebook</a>
+                <a href="#" class="btn-link link-questions"><span class="icon">📝</span> بنك الأسئلة والتدريبات التفاعلية</a>
+            </div>
+        </div>
+
+        <footer>
+            <img src="main - Copy.png" alt="صورة المطور" class="profile-img">
+            <h2>✨ المهندس ابراهيم زياده 👨‍💻✨</h2>
+            <h5>الإحصاء مع إبراهيم زيادة.. درجاتك هتقفل بزيادة😂</h5>
+        </footer>
+
+    </div>
+
+</body>
+</html>
